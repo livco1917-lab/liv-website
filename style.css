@@ -88,9 +88,14 @@ section {
 .profile-container {
   display: flex;
   align-items: center;
-  gap: 2rem; /* space between pic and text */
+  gap: 2rem;
   max-width: 900px;
   margin: auto;
+  background: #222;       /* background color */
+  padding: 2rem;          /* spacing inside the box */
+  border-radius: 10px;    /* rounded corners */
+}
+
 }
 
 .profile-text {
