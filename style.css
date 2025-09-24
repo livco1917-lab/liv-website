@@ -158,6 +158,22 @@ section {
   line-height: 1.8;
 }
 
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #280137;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: #322349;
+}
+
 /* Projects */
 #projects {
   background: #111;
@@ -219,7 +235,7 @@ form button {
   border-radius: 5px;
 }
 form button:hover {
-  background: #3385cc;
+  background: #322349;
 }
 
 /* Footer */
