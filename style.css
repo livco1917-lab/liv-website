@@ -23,34 +23,18 @@ header {
   z-index: 1000;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
-}
-
 nav {
   display: flex;
   justify-content: space-between; /* logo left, menu right */
   align-items: center;
 }
 
-.logo {
+nav ul {
+  list-style: none;
   display: flex;
-  align-items: center;
-  gap: 0.5rem; /* space between logo and name */
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
+  justify-content: flex-end;
+  gap: 2rem;
 }
-
-.logo img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%; /* optional: make logo circular */
-}
-
 
 nav ul li a {
   text-decoration: none;
@@ -61,16 +45,62 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #280137;
-  /*280137 4da6ff*/
 }
 
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* optional: make logo circular */
+}
+
+/* Hamburger (hidden by default) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Dropdown menu for mobile */
+@media(max-width: 768px) {
+  nav ul {
+    display: none; /* hide default menu */
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  nav ul.show {
+    display: flex; /* show when toggled */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+}
+
+/* Sections */
 section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 6rem 3rem 3rem; /* extra top padding so content isn’t hidden under header */
+  padding: 6rem 3rem 3rem;
   text-align: center;
 }
 
@@ -90,15 +120,15 @@ section {
 .profile-pic {
   width: 200px;
   height: 200px;
-  border-radius: 50%;   /* makes it round */
-  object-fit: cover;    /* keeps aspect ratio inside circle */
-  border: 4px solid #280137; /* optional light blue border */
-  margin: 1.5rem 0;     /* spacing above/below */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #280137;
+  margin: 1.5rem 0;
 }
 
 /* Profile Info Section */
 #profile {
-  align-items: flex-start; /* stop forcing center */
+  align-items: flex-start;
   text-align: left;
 }
 
@@ -114,23 +144,19 @@ section {
   gap: 2rem;
   max-width: 900px;
   margin: auto;
-  background: #111;       /* background color */
-  padding: 2rem;          /* spacing inside the box */
-  border-radius: 10px;    /* rounded corners */
-}
-
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .profile-text {
-  flex: 1; /* take remaining space */
+  flex: 1;
 }
 
 #profile p {
   max-width: 600px;
   line-height: 1.8;
 }
-
-
 
 /* Projects */
 #projects {
@@ -196,6 +222,7 @@ form button:hover {
   background: #3385cc;
 }
 
+/* Footer */
 footer {
   padding: 2rem;
   text-align: center;
@@ -204,19 +231,17 @@ footer {
   color: #aaa;
 }
 
+/* Responsive Adjustments */
 @media(max-width: 768px) {
   #contact {
     grid-template-columns: 1fr;
-  }
-  nav ul {
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
   .profile-container {
     flex-direction: column;
     text-align: center;
   }
+
   .profile-title {
     text-align: center;
   }
