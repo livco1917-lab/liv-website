@@ -55,7 +55,13 @@ nav ul li a:hover {
   font-size: 1.2rem;
   font-weight: bold;
   color: #fff;
+  text-decoration: none;  /* remove underline */
 }
+
+.logo:hover {
+  color: #fff; /* no color change on hover */
+}
+
 .logo img {
   width: 40px;
   height: 40px;
