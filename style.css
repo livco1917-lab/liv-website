@@ -73,20 +73,35 @@ section {
   margin: 1.5rem 0;     /* spacing above/below */
 }
 
-/* Profile Info Layout */
+/* Profile Info Section */
+#profile {
+  align-items: flex-start; /* stop forcing center */
+  text-align: left;
+}
+
+.profile-title {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
 .profile-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 2rem; /* space between pic and text */
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
-  text-align: left; /* left-align text inside */
+}
+
+.profile-text {
+  flex: 1; /* take remaining space */
 }
 
 #profile p {
-  max-width: 500px;
+  max-width: 600px;
+  line-height: 1.8;
 }
+
 
 
 /* Projects */
@@ -168,5 +183,13 @@ footer {
   nav ul {
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-title {
+    text-align: center;
   }
 }
