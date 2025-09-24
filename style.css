@@ -91,7 +91,7 @@ section {
   gap: 2rem;
   max-width: 900px;
   margin: auto;
-  background: #222;       /* background color */
+  background: #111;       /* background color */
   padding: 2rem;          /* spacing inside the box */
   border-radius: 10px;    /* rounded corners */
 }
