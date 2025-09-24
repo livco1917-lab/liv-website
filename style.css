@@ -153,6 +153,7 @@ section {
   background: #111;
   padding: 2rem;
   border-radius: 10px;
+  position: relative; /* allows absolute positioning inside */
 }
 
 .profile-text {
@@ -165,8 +166,9 @@ section {
 }
 
 .learn-more-btn {
-  display: inline-block;
-  margin-top: 1.5rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   padding: 0.8rem 1.5rem;
   background: #280137;
   color: #fff;
