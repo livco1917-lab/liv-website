@@ -3,80 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LivCo</title>
+  <title>Portfolio | LivCo</title>
   <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5fbff; /* very light blue */
-      color: #333;
+      font-family: 'Arial', sans-serif;
+      background: #1a1a1a; /* dark background */
+      color: #fff;
+      line-height: 1.6;
     }
-    header {
-      background-color: #4da6ff; /* light blue */
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
+
     section {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-    }
-    section h2 {
-      color: #4da6ff;
-    }
-    footer {
-      background: #e6f2ff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
       text-align: center;
+    }
+
+    /* Intro Section */
+    #intro h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    #intro p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
+    /* Projects */
+    #projects {
+      background: #111;
+    }
+    .project-grid {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .project {
+      background: #222;
       padding: 1rem;
+      border-radius: 10px;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+    .project img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Contact */
+    #contact {
+      background: #1a1a1a;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+    #contact div {
+      background: #222;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 5px;
+      background: #333;
+      color: white;
+    }
+    form button {
+      background: #4da6ff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      margin-top: 0.5rem;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    form button:hover {
+      background: #3385cc;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background: #111;
       font-size: 0.9rem;
-      color: #555;
+      color: #aaa;
+    }
+
+    @media(max-width: 768px) {
+      #contact {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome! Browse through to get to know me!</h1>
-    <p>Made with GitHub Pages</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>Hello! My name is Prince Wally G. Esteban, and this is my very first GitHub Pages site. 🎉</p>
-    </section>
+  <!-- Intro -->
+  <section id="intro">
+    <h1>Prince Wally G. Esteban</h1>
+    <p>A Wide Field Designer - Graphics, Web, Project, and More.</p>
+  </section>
 
-    <section>
-      <h2>Projects</h2>
-      <p>I’m working on different projects, from defect detection with AI to web development. More coming soon!</p>
-    </section>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <img src="https://via.placeholder.com/280x160" alt="Project 1">
+        <h3>Project One</h3>
+        <p>Short description of your project.</p>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/280x160" alt="Project 2">
+        <h3>Project Two</h3>
+        <p>Short description of your project.</p>
+      </div>
+      <div class="project">
+        <img src="https://via.placeholder.com/280x160" alt="Project 3">
+        <h3>Project Three</h3>
+        <p>Short description of your project.</p>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>You can reach me via:</p>
-      <p>GitHub profile: livco1917</p>
-      <p>Email: liv.co1917@gmail.com</p>
-      <p>Phone: 09949003164</p>
-
-    </section>
-  </main>
+  <!-- Contact -->
+  <section id="contact">
+    <div>
+      <h2>Contact Info</h2>
+      <p><strong>Address:</strong> Quezon City, Philippines</p>
+      <p><strong>Phone:</strong> +63 994 900 3164</p>
+      <p><strong>Email:</strong> liv.co1917@email.com</p>
+    </div>
+    <div>
+      <h2>Contact Form</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
   <footer>
-    © 2025 LivCo. All rights reserved.
+    © 2025 LivCo. All Rights Reserved.
   </footer>
+
 </body>
 </html>
