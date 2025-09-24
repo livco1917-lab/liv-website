@@ -73,6 +73,22 @@ section {
   margin: 1.5rem 0;     /* spacing above/below */
 }
 
+/* Profile Info Layout */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* space between pic and text */
+  max-width: 800px;
+  margin: auto;
+  text-align: left; /* left-align text inside */
+}
+
+#profile p {
+  max-width: 500px;
+}
+
+
 /* Projects */
 #projects {
   background: #111;
