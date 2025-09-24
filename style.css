@@ -30,6 +30,28 @@ nav ul {
   gap: 2rem;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between logo and name */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* optional: make logo circular */
+}
+
+
 nav ul li a {
   text-decoration: none;
   color: #fff;
